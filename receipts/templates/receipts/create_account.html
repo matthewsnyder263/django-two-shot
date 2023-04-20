@@ -7,6 +7,30 @@
         <title>Document</title>
     </head>
     <body>
+        {% if user.is_authenticated %}
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">Receipt List</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'create_receipt' %}">Create Receipt</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'expense_category_list' %}">Expense Categories</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'create_expense_category' %}">Create Expense Category</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'account_list' %}">Accounts</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'create_account' %}">Create Account</a>
+                    </li>
+                </ul>
+            </nav>
+        {% endif %}
         <main>
             <div>
                 <h1>Create Account</h1>
