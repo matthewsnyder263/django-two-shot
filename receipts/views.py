@@ -40,6 +40,7 @@ def expense_category_list(request):
     return render(request, "receipts/expense_category_list.html"), context
 
 
+@login_required
 def account_list(request):
     accounts = Account.objects.filter(owner=request.user)
     context = {
